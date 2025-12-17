@@ -31,7 +31,7 @@ public class PersonneController {
         return new ResponseEntity<>(personneCreated, HttpStatus.CREATED);
     }
     @GetMapping("/{id}") // entre accolado veut dire que c'est une valeur qui peut changer
-    public ResponseEntity<Personne> getPersonneById(@PathVariable Long id){ // @PathVaraible est une variable
+    public ResponseEntity<Personne> getPersonneById(@PathVariable Long id){ // @PathVaraible sert à récupérer une valeur qui se trouve dans l’URL et la mettre dans une variable Java ici la variable est id et est de type Long
 
         Optional<Personne> personne = personneRepository.findById(id); // un optional parce que FindById retourne un optional
 
